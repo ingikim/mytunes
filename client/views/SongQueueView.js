@@ -12,7 +12,8 @@ var SongQueueView = Backbone.View.extend({
 
   addHandle: function(song) {
     if (this.collection.length === 1) {
-      song.play();
+      //song.play();
+      this.collection.playFirst();
     }
     this.render();
   },
@@ -20,7 +21,8 @@ var SongQueueView = Backbone.View.extend({
   removeHandle: function(song) {
     //console.log(song);
     if (this.collection.length >= 1) {
-      this.collection.first().play();
+      // this.collection.first().play();
+      this.collection.playFirst();
     }
     else {
       this.collection.emptied();
