@@ -8,6 +8,7 @@ var PlayerView = Backbone.View.extend({
   initialize: function() {
     this.$el.bind('ended', $.proxy(function(){
       if (this.model !== ''){
+        
         this.model.ended();
       }
     },this));

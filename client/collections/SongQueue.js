@@ -25,6 +25,15 @@ var SongQueue = Songs.extend({
     this.trigger("emptied", this);
   },
 
+  addList: function(playList) {
+    console.log(playList);
+    playList.forEach(function(song) {
+      this.add(song);
+    }, this);
+    //debugger;
+
+  },
+
   playFirst: function() {
     this.first().play();
   }
