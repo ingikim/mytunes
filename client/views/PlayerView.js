@@ -7,12 +7,7 @@ var PlayerView = Backbone.View.extend({
 
   initialize: function() {
     this.$el.bind('ended', $.proxy(function(){
-      //console.log(e);
-      //console.log(this);
-      //debugger;
       if (this.model !== ''){
-        //debugger;
-        //this.songSet = false;
         this.model.ended();
       }
     },this));
@@ -21,8 +16,6 @@ var PlayerView = Backbone.View.extend({
   setSong: function(song){
     this.model = song;
     this.render();
-    //this.songSet = true;
-    //console.log("Set Song:", this.model);
   },
 
   render: function(){

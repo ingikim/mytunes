@@ -3,8 +3,6 @@ var SongQueue = Songs.extend({
 
   initialize: function(){
     this.on('ended', function(song){
-      //debugger;
-      //this.dequeue(song);
       this.shift();
     }, this);
 
@@ -14,18 +12,8 @@ var SongQueue = Songs.extend({
   },
 
   enqueue: function(song) {
-    //debugger;
-    // console.log("Queue Length: ", this.length, " , ", "Queue: ", this);
-    // if (this.length === 0) {
-    //   this.add(song);
-    //   song.play();
-    // }
-    // else {
-    //   //debugger;
-    //   this.add(song);
-    // }
+
     this.add(song);
-    //console.log(this);
 
   },
 
