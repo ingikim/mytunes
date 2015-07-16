@@ -28,10 +28,9 @@ var AppModel = Backbone.Model.extend({
     }, this);
 
     // Song has Ended
-    // this.get('currentSong').on('ended', function(song){
-    //   debugger;
-    //   this.get('songQueue').dequeue(song);
-    // }, this);
+    params.library.on('ended', function(song){
+      this.get('songQueue').dequeue(song);
+    }, this);
 
 
     // Song List is Empty
