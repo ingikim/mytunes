@@ -12,15 +12,18 @@ var SongQueueView = Backbone.View.extend({
 
   addHandle: function(song) {
     if (this.collection.length === 1) {
-      song.play();
+      //debugger;
+      //song.play();
+      this.collection.playFirst();
     }
     this.render();
   },
 
-  removeHandle: function(song) {
+  removeHandle: function() {
     //console.log(song);
     if (this.collection.length >= 1) {
-      this.collection.first().play();
+      //this.collection.first().play();
+      this.collection.playFirst();
     }
     else {
       this.collection.emptied();
