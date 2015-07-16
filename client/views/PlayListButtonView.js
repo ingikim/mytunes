@@ -14,7 +14,7 @@ var PlayListButtonView = Backbone.View.extend({
   },
 
   render: function() {
-    this.$el.text('Playlist');
+    this.$el.text('Song Queue');
     this.$el.addClass('playListButton');
   },
 
