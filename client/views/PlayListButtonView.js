@@ -4,7 +4,6 @@ var PlayListButtonView = Backbone.View.extend({
 
   initialize: function() {
     this.render();
-    //this.$el.on("click", this.clicked, this);
   },
 
   events: {

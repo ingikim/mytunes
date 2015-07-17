@@ -12,9 +12,7 @@ var SongQueue = Songs.extend({
   },
 
   enqueue: function(song) {
-
     this.add(song);
-
   },
 
   dequeue: function(song) {
@@ -26,12 +24,9 @@ var SongQueue = Songs.extend({
   },
 
   addList: function(playList) {
-    console.log(playList);
     playList.forEach(function(song) {
       this.add(song);
     }, this);
-    //debugger;
-
   },
 
   playFirst: function() {
