@@ -28,13 +28,14 @@ var AppView = Backbone.View.extend({
 
   render: function(){
     return this.$el.html([
+      this.visualizer.$el,
+      '<br>',
       this.playerView.$el,
       this.playListButtonView.$el,
       this.libraryView.$el,
       this.songQueueView.$el,
       this.songPlayListView.$el,
       this.playListMenuView.$el,
-      this.visualizer.$el,
     ]);
   }
 
